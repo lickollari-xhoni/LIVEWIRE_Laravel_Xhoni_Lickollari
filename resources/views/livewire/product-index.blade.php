@@ -1,9 +1,9 @@
 <div>
-    <div class="container">
+    <div class="container mt-5">
         <input class="form-control" wire:model.live="search" placeholder="Cerca un prodotto...">
     </div>
 
-    <table class="table mt-5">
+    <table class="table mt-5" wire:poll.5s>
         <thead>
             <tr>
                 <th scope="col">#</th>
