@@ -10,7 +10,7 @@ class ProductEdit extends Component
 {
 
     public Product $product;
-    
+
     #[Validate]
     public $name;
 
@@ -55,7 +55,9 @@ class ProductEdit extends Component
 
     public function mount()
     {
-        // Logica di inizializzazione, se necessaria
+        $this->name = $this->product->name;
+        $this->pages = $this->product->pages;
+        $this->year = $this->product->year;
     }
 
     public function render()
