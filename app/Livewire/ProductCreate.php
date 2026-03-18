@@ -18,6 +18,7 @@ class ProductCreate extends Component
             'pages' => $this->pages,
             'year' => $this->year
         ]);
+        $this->reset('name', 'pages', 'year');
     }
 
     public function render()
