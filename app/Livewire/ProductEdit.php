@@ -8,6 +8,9 @@ use Livewire\Attributes\Validate;
 
 class ProductEdit extends Component
 {
+
+    public Product $product;
+    
     #[Validate]
     public $name;
 
