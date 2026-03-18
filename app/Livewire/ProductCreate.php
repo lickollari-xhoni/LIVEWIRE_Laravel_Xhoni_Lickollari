@@ -18,8 +18,20 @@ class ProductCreate extends Component
     #[Validate]
     public $year;
 
+    protected function rules()
+    {
+        return [
+            'name' => 'required',
+            'pages' => 'integer',
+            'year' => 'integer',
+        ];
+    }
+
     public function store()
     {
+
+        $this->validate();
+
         Product::create([
             'name' => $this->name,
             'pages' => $this->pages,
