@@ -4,12 +4,18 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Product;
+use Livewire\Attributes\Validate;
 
 
 class ProductCreate extends Component
 {
+    #[Validate]
     public $name;
+
+    #[Validate]
     public $pages;
+
+    #[Validate]
     public $year;
 
     public function store()
@@ -19,7 +25,7 @@ class ProductCreate extends Component
             'pages' => $this->pages,
             'year' => $this->year
         ]);
-        
+
         session()->flash('success', 'Prodotto aggiunto con sucecsso!');
         $this->reset('name', 'pages', 'year');
     }
