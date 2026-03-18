@@ -41,11 +41,11 @@ class ProductCreate extends Component
 
         $this->validate();
 
-        Product::create([
-            'name' => $this->name,
-            'pages' => $this->pages,
-            'year' => $this->year
-        ]);
+        // Product::create([
+        //     'name' => $this->name,
+        //     'pages' => $this->pages,
+        //     'year' => $this->year
+        // ]);
 
         session()->flash('success', 'Prodotto aggiunto con sucecsso!');
         $this->reset('name', 'pages', 'year');

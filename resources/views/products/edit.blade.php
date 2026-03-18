@@ -2,7 +2,7 @@
 
     <section class="container mt-5">
 
-        @livewire('product-edit')
+        @livewire('product-edit', ['product' => $product])
 
     </section>
 
