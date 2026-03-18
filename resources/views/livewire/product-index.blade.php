@@ -3,7 +3,13 @@
         <input class="form-control" wire:model.live="search" placeholder="Cerca un prodotto...">
     </div>
 
-    <table class="table mt-5" wire:poll.5s>
+    @if (session('success'))
+        <div class="alert alert-success mt-5" role="alert">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    <table class="table mt-5" >
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -21,8 +27,11 @@
                     <td>{{ $product->pages ?? '-' }}</td>
                     <td>{{ $product->year ?? '-' }}</td>
                     <td>
-                        <a class="btn btn-warning" href="{{ route('product.edit', ['product' => $product]) }}">Modifica</a>
-                        
+                        <a class="btn btn-warning"
+                            href="{{ route('product.edit', ['product' => $product]) }}">Modifica</a>
+
+                        <button class="btn btn-danger" wire:click="delete({{ $product->id }})">Elimina</button>
+
                     </td>
                 </tr>
             @endforeach
