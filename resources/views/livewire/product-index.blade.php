@@ -20,6 +20,10 @@
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->pages ?? '-' }}</td>
                     <td>{{ $product->year ?? '-' }}</td>
+                    <td>
+                        <a class="btn btn-warning" href="{{ route('product.edit', ['product' => $product->id]) }}">Modifica</a>
+                        
+                    </td>
                 </tr>
             @endforeach
         </tbody>
