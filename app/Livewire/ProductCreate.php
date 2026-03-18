@@ -27,6 +27,15 @@ class ProductCreate extends Component
         ];
     }
 
+    protected function messages()
+    {
+        return [
+            'name' => 'Il nome è obbligatorio.',
+            'pages' => 'Le pagine devono essere un numero intero.',
+            'year' => 'L\'anno deve essere un numero intero.',
+        ];
+    }   
+
     public function store()
     {
 
