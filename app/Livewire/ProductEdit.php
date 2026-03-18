@@ -50,7 +50,7 @@ class ProductEdit extends Component
         ]);
 
         session()->flash('success', 'Prodotto aggiornato con successo!');
-        $this->reset('name', 'pages', 'year');
+        
     }
 
     public function mount()
