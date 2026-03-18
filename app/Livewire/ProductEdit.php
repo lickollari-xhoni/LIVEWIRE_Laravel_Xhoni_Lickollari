@@ -43,13 +43,13 @@ class ProductEdit extends Component
 
         $this->validate();
 
-        Product::create([
+        $this->product->update([
             'name' => $this->name,
             'pages' => $this->pages,
             'year' => $this->year
         ]);
 
-        session()->flash('success', 'Prodotto aggiunto con sucecsso!');
+        session()->flash('success', 'Prodotto aggiornato con successo!');
         $this->reset('name', 'pages', 'year');
     }
 
