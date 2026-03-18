@@ -1,5 +1,8 @@
 <div>
 
+    <input class="form-control" wire:model.live="search">
+
+
     <table class="table">
         <thead>
             <tr>
@@ -9,23 +12,16 @@
                 <th scope="col">Anno di Rilascio</th>
                 <th scope="col">Azioni</th>
             </tr>
-
         </thead>
         <tbody>
-
             @foreach ($products as $product)
                 <tr>
-
                     <th scope="row">{{ $product->id }}</th>
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->pages ?? '-' }}</td>
                     <td>{{ $product->year ?? '-' }}</td>
-
                 </tr>
             @endforeach
-
         </tbody>
     </table>
-
-
 </div>
