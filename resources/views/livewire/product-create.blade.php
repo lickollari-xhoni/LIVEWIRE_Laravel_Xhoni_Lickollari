@@ -1,5 +1,6 @@
 <div>
-    <form>
+    <form wire:submit="store">
+
         <div class="mb-3">
             <label class="form-label">Nome Prodotto</label>
             <input type="text" class="form-control" wire:model="name">
@@ -16,5 +17,6 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Salva</button>
+
     </form>
 </div>
