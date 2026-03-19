@@ -1,36 +1,73 @@
 :root {
     /* Colori Primari (Brand) */
-    --primary: #4f46e5;         /* Indigo moderno */
-    --primary-hover: #4338ca;   /* Indigo leggermente più scuro */
-    
+    --primary: #4f46e5;
+    /* Indigo moderno */
+    --primary-hover: #4338ca;
+    /* Indigo leggermente più scuro */
+
     /* Colori di Sfondo e Superfici */
-    --bg-body: #f9fafb;         /* Grigio chiarissimo per lo sfondo */
-    --bg-card: #ffffff;         /* Bianco puro per i contenitori/tabelle */
-    
+    --bg-body: #f9fafb;
+    /* Grigio chiarissimo per lo sfondo */
+    --bg-card: #ffffff;
+    /* Bianco puro per i contenitori/tabelle */
+
     /* Colori del Testo */
-    --text-main: #111827;       /* Quasi nero per i titoli */
-    --text-muted: #6b7280;      /* Grigio per testi secondari o placeholder */
-    
+    --text-main: #111827;
+    /* Quasi nero per i titoli */
+    --text-muted: #6b7280;
+    /* Grigio per testi secondari o placeholder */
+
     /* Stati (Alerts & Bottoni) */
-    --success: #10b981;         /* Verde smeraldo */
-    --danger: #ef4444;          /* Rosso corallo */
-    --warning: #f59e0b;         /* Ambra per il tasto modifica */
-    
+    --success: #10b981;
+    /* Verde smeraldo */
+    --danger: #ef4444;
+    /* Rosso corallo */
+    --warning: #f59e0b;
+    /* Ambra per il tasto modifica */
+
     /* Bordi e Ombre */
-    --border-color: #e5e7eb;    /* Grigio chiaro per linee di tabelle e input */
+    --border-color: #e5e7eb;
+    /* Grigio chiaro per linee di tabelle e input */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    
+
     /* Raggi di curvatura (Border Radius) */
     --radius: 8px;
 }
+
+
+/*----------------------------------------------------BODY--------------------------------------------------------------------*/
+
+body {
+    /* Usiamo il grigio neutro chiarissimo per lo sfondo generale */
+    background-color: var(--bg-body);
+
+    /* Impostiamo il colore del testo principale */
+    color: var(--text-main);
+
+    /* Un font moderno e pulito (sans-serif) */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    /* Miglioriamo la leggibilità */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+
+    /* Eliminiamo margini superflui */
+    margin: 0;
+    padding: 0;
+}
+
+/*----------------------------------------------------BODY--------------------------------------------------------------------*/
+
+
 
 
 /*----------------------------------------------------NAVBAR--------------------------------------------------------------------*/
 
 /* Custom Navbar Styling */
 .navbar {
-    background-color: var(--bg-card) !important; /* Bianco pulito */
+    background-color: var(--bg-card) !important;
+    /* Bianco pulito */
     border-bottom: 1px solid var(--border-color);
     padding: 0.8rem 0;
     box-shadow: var(--shadow-sm);
@@ -38,7 +75,8 @@
 
 .navbar-brand {
     font-weight: 700;
-    color: var(--primary) !important; /* Indigo della root */
+    color: var(--primary) !important;
+    /* Indigo della root */
     letter-spacing: -0.5px;
 }
 
@@ -49,8 +87,10 @@
     margin: 0 5px;
 }
 
-.nav-link:hover, .nav-link.active {
-    color: var(--primary) !important; /* Cambio colore al passaggio */
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary) !important;
+    /* Cambio colore al passaggio */
 }
 
 /* Effetto focus per accessibilità */
@@ -60,3 +100,149 @@
 
 
 /*----------------------------------------------------NAVBAR--------------------------------------------------------------------*/
+
+/*----------------------------------------------------INDEX--------------------------------------------------------------------*/
+
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+
+/*----------------------------------------------------INDEX--------------------------------------------------------------------*/
+
+
+/*--------------------------------------------PRODUCT-CREATE--------------------------------------------------------------------*/
+
+
+/* Stile personalizzato per gli input basato sulla Root */
+.custom-input {
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 0.8rem;
+    border-radius: var(--radius);
+    transition: all 0.2s ease;
+}
+
+.custom-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+    outline: none;
+}
+
+/* Alert di successo che usa il verde della Root */
+.alert-custom-success {
+    background-color: #ecfdf5;
+    border: 1px solid var(--success);
+    color: var(--success);
+    border-radius: var(--radius);
+}
+
+
+/*--------------------------------------------PRODUCT-CREATE--------------------------------------------------------------------*/
+
+
+/*--------------------------------------------PRODUCT-EDIT--------------------------------------------------------------------*/
+
+/* Stili riutilizzabili basati sulla Root */
+.custom-input {
+    border: 1px solid var(--border-color);
+    padding: 0.7rem 0.9rem;
+    border-radius: var(--radius);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    outline: none;
+}
+
+.alert-custom-success {
+    background-color: #f0fdf4;
+    border: 1px solid var(--success);
+    color: var(--success);
+    border-radius: var(--radius);
+}
+
+/*--------------------------------------------PRODUCT-EDIT--------------------------------------------------------------------*/
+
+
+/*---------------------------------------------EDIT--------------------------------------------------------------------*/
+
+
+/* Stile per il bottone tondo di ritorno */
+.btn-outline-secondary {
+    border-color: var(--border-color);
+    color: var(--text-muted);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--bg-body);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+
+/*---------------------------------------------EDIT--------------------------------------------------------------------*/
+
+
+/*---------------------------------------------PRODUCT-INDEX--------------------------------------------------------------------*/
+
+
+/* Ricerca */
+.custom-search:focus {
+    box-shadow: none;
+    border-color: var(--border-color);
+}
+
+/* Stile Tabella */
+.table thead th {
+    border-bottom: 1px solid var(--border-color);
+    letter-spacing: 0.05em;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(79, 70, 229, 0.02);
+}
+
+/* Bottoni Azione Personalizzati */
+.btn-action-edit {
+    background-color: white;
+    color: var(--warning);
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+}
+
+.btn-action-edit:hover {
+    background-color: var(--warning);
+    color: white;
+}
+
+.btn-action-delete {
+    background-color: white;
+    color: var(--danger);
+    border: 1px solid var(--border-color);
+    border-left: none;
+    font-weight: 600;
+}
+
+.btn-action-delete:hover {
+    background-color: var(--danger);
+    color: white;
+}
+
+.alert-custom-success {
+    background-color: #ecfdf5;
+    border: 1px solid var(--success);
+    color: var(--success);
+    border-radius: var(--radius);
+}
+
+
+/*---------------------------------------------PRODUCT-INDEX--------------------------------------------------------------------*/
