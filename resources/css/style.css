@@ -24,3 +24,39 @@
     /* Raggi di curvatura (Border Radius) */
     --radius: 8px;
 }
+
+
+/*----------------------------------------------------NAVBAR--------------------------------------------------------------------*/
+
+/* Custom Navbar Styling */
+.navbar {
+    background-color: var(--bg-card) !important; /* Bianco pulito */
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.8rem 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary) !important; /* Indigo della root */
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    color: var(--text-muted) !important;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+    margin: 0 5px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary) !important; /* Cambio colore al passaggio */
+}
+
+/* Effetto focus per accessibilità */
+.nav-link:focus {
+    color: var(--primary-hover) !important;
+}
+
+
+/*----------------------------------------------------NAVBAR--------------------------------------------------------------------*/
