@@ -1,0 +1,26 @@
+:root {
+    /* Colori Primari (Brand) */
+    --primary: #4f46e5;         /* Indigo moderno */
+    --primary-hover: #4338ca;   /* Indigo leggermente più scuro */
+    
+    /* Colori di Sfondo e Superfici */
+    --bg-body: #f9fafb;         /* Grigio chiarissimo per lo sfondo */
+    --bg-card: #ffffff;         /* Bianco puro per i contenitori/tabelle */
+    
+    /* Colori del Testo */
+    --text-main: #111827;       /* Quasi nero per i titoli */
+    --text-muted: #6b7280;      /* Grigio per testi secondari o placeholder */
+    
+    /* Stati (Alerts & Bottoni) */
+    --success: #10b981;         /* Verde smeraldo */
+    --danger: #ef4444;          /* Rosso corallo */
+    --warning: #f59e0b;         /* Ambra per il tasto modifica */
+    
+    /* Bordi e Ombre */
+    --border-color: #e5e7eb;    /* Grigio chiaro per linee di tabelle e input */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    
+    /* Raggi di curvatura (Border Radius) */
+    --radius: 8px;
+}
